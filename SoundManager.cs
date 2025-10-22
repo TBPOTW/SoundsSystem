@@ -8,9 +8,10 @@ public class SoundManager : MonoBehaviour
 
     AudioSource audioSrc => GetComponent<AudioSource>();
 
-    public void playSound(AudioClip audio, float volume = 1f, bool destroyed = false, float p1 = 0.85f, float p2 = 1.2f)
+    public void playSound(AudioClip audio, float volume = 1f, float p1 = 0.85f, float p2 = 1.2f)
     {
         audioSrc.pitch = Random.Range(p1, p2);
         audioSrc.PlayOneShot(audio, volume);
     }
 }
+
